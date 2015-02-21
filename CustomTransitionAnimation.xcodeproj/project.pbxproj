@@ -14,6 +14,11 @@
 		40E70C161A98B03D00039FEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E70C151A98B03D00039FEB /* Images.xcassets */; };
 		40E70C191A98B03D00039FEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E70C171A98B03D00039FEB /* LaunchScreen.xib */; };
 		40E70C251A98B03D00039FEB /* CustomTransitionAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E70C241A98B03D00039FEB /* CustomTransitionAnimationTests.m */; };
+		40E70C301A98B04A00039FEB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E70C2F1A98B04A00039FEB /* SecondViewController.m */; };
+		40E70C331A98B0C700039FEB /* TransitionFromFirstToSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E70C321A98B0C700039FEB /* TransitionFromFirstToSecond.m */; };
+		40E70C361A98B9D000039FEB /* TransitionFromSecondToFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E70C351A98B9D000039FEB /* TransitionFromSecondToFirst.m */; };
+		40E70C391A98E6A700039FEB /* TopToBottomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E70C381A98E6A700039FEB /* TopToBottomTransition.m */; };
+		40E70C3C1A98EA0800039FEB /* BottomToTopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E70C3B1A98EA0800039FEB /* BottomToTopTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		40E70C1E1A98B03D00039FEB /* CustomTransitionAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTransitionAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E70C231A98B03D00039FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E70C241A98B03D00039FEB /* CustomTransitionAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionAnimationTests.m; sourceTree = "<group>"; };
+		40E70C2E1A98B04A00039FEB /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		40E70C2F1A98B04A00039FEB /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		40E70C311A98B0C700039FEB /* TransitionFromFirstToSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromFirstToSecond.h; sourceTree = "<group>"; };
+		40E70C321A98B0C700039FEB /* TransitionFromFirstToSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromFirstToSecond.m; sourceTree = "<group>"; };
+		40E70C341A98B9D000039FEB /* TransitionFromSecondToFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromSecondToFirst.h; sourceTree = "<group>"; };
+		40E70C351A98B9D000039FEB /* TransitionFromSecondToFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromSecondToFirst.m; sourceTree = "<group>"; };
+		40E70C371A98E6A700039FEB /* TopToBottomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopToBottomTransition.h; sourceTree = "<group>"; };
+		40E70C381A98E6A700039FEB /* TopToBottomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopToBottomTransition.m; sourceTree = "<group>"; };
+		40E70C3A1A98EA0800039FEB /* BottomToTopTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomToTopTransition.h; sourceTree = "<group>"; };
+		40E70C3B1A98EA0800039FEB /* BottomToTopTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomToTopTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +100,16 @@
 				40E70C0D1A98B03D00039FEB /* AppDelegate.m */,
 				40E70C0F1A98B03D00039FEB /* ViewController.h */,
 				40E70C101A98B03D00039FEB /* ViewController.m */,
+				40E70C2E1A98B04A00039FEB /* SecondViewController.h */,
+				40E70C2F1A98B04A00039FEB /* SecondViewController.m */,
+				40E70C311A98B0C700039FEB /* TransitionFromFirstToSecond.h */,
+				40E70C321A98B0C700039FEB /* TransitionFromFirstToSecond.m */,
+				40E70C341A98B9D000039FEB /* TransitionFromSecondToFirst.h */,
+				40E70C351A98B9D000039FEB /* TransitionFromSecondToFirst.m */,
+				40E70C371A98E6A700039FEB /* TopToBottomTransition.h */,
+				40E70C381A98E6A700039FEB /* TopToBottomTransition.m */,
+				40E70C3A1A98EA0800039FEB /* BottomToTopTransition.h */,
+				40E70C3B1A98EA0800039FEB /* BottomToTopTransition.m */,
 				40E70C121A98B03D00039FEB /* Main.storyboard */,
 				40E70C151A98B03D00039FEB /* Images.xcassets */,
 				40E70C171A98B03D00039FEB /* LaunchScreen.xib */,
@@ -219,7 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E70C3C1A98EA0800039FEB /* BottomToTopTransition.m in Sources */,
+				40E70C361A98B9D000039FEB /* TransitionFromSecondToFirst.m in Sources */,
+				40E70C301A98B04A00039FEB /* SecondViewController.m in Sources */,
+				40E70C331A98B0C700039FEB /* TransitionFromFirstToSecond.m in Sources */,
 				40E70C111A98B03D00039FEB /* ViewController.m in Sources */,
+				40E70C391A98E6A700039FEB /* TopToBottomTransition.m in Sources */,
 				40E70C0E1A98B03D00039FEB /* AppDelegate.m in Sources */,
 				40E70C0B1A98B03D00039FEB /* main.m in Sources */,
 			);
@@ -414,6 +444,7 @@
 				40E70C2A1A98B03D00039FEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40E70C2B1A98B03D00039FEB /* Build configuration list for PBXNativeTarget "CustomTransitionAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +453,7 @@
 				40E70C2D1A98B03D00039FEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
