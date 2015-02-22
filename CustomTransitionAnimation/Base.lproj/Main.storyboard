@@ -17,19 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXv-VW-0VV">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="274" y="285" width="52" height="30"/>
+                                <state key="normal" title="present">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushToSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvE-Xi-00a"/>
+                                    <action selector="presentController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zcm-oN-pyU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3p-pc-B73">
+                                <rect key="frame" x="283" y="363" width="34" height="30"/>
+                                <state key="normal" title="push">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushToSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8N-o8-MSo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="YXv-VW-0VV" secondAttribute="centerX" id="1pw-yO-pf1"/>
+                            <constraint firstItem="r3p-pc-B73" firstAttribute="top" secondItem="YXv-VW-0VV" secondAttribute="bottom" constant="48" id="Wh6-UX-sfh"/>
                             <constraint firstAttribute="centerY" secondItem="YXv-VW-0VV" secondAttribute="centerY" id="aig-Na-mHY"/>
+                            <constraint firstAttribute="centerX" secondItem="r3p-pc-B73" secondAttribute="centerX" id="vKW-QX-MgT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qiz-fO-AA4"/>
@@ -55,19 +66,31 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yM-E5-IVF">
                                 <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Dimiss">
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="popToView:" destination="AJN-jt-wiM" eventType="touchUpInside" id="DrO-cR-KNd"/>
+                                    <action selector="disMiss:" destination="AJN-jt-wiM" eventType="touchUpInside" id="k2T-0N-YxR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-t1-onF">
+                                <rect key="frame" x="285" y="369" width="30" height="30"/>
+                                <state key="normal" title="pop">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="popToView:" destination="AJN-jt-wiM" eventType="touchUpInside" id="ipF-Pj-nEd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="5yM-E5-IVF" secondAttribute="centerY" id="0Q1-Pb-2m1"/>
+                            <constraint firstAttribute="centerX" secondItem="4rD-t1-onF" secondAttribute="centerX" id="NkX-T2-uEk"/>
                             <constraint firstAttribute="centerX" secondItem="5yM-E5-IVF" secondAttribute="centerX" id="ceq-A7-P20"/>
+                            <constraint firstItem="4rD-t1-onF" firstAttribute="top" secondItem="5yM-E5-IVF" secondAttribute="bottom" constant="54" id="ncT-wm-u1L"/>
                         </constraints>
                     </view>
                 </viewController>

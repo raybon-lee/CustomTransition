@@ -12,7 +12,7 @@
 #import "TopToBottomTransition.h"
 #import "BottomToTopTransition.h"
 
-@interface ViewController ()<UIViewControllerTransitioningDelegate>
+@interface ViewController ()<UIViewControllerTransitioningDelegate,UINavigationControllerDelegate>
 
 @end
 
@@ -20,8 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.transitioningDelegate = self;
- //   self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,29 +30,29 @@
     [super viewDidAppear:animated];
     
     // Set outself as the navigation controller's delegate so we're asked for a transitioning object
-  //  self.navigationController.delegate = self;
+    self.navigationController.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     // Stop being the navigation controller's delegate
-//    if (self.navigationController.delegate == self) {
-//        self.navigationController.delegate = nil;
-//    }
+    if (self.navigationController.delegate == self) {
+        self.navigationController.delegate = nil;
+    }
 }
 
-//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
-//{
-//    if (fromVC == self && [toVC isKindOfClass:[SecondViewController class]]) {
-//        TransitionFromFirstToSecond *transition = [[TransitionFromFirstToSecond alloc] init];
-//
-//        return transition;
-//    }
-//    else {
-//        return nil;
-//    }
-//}
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    if (fromVC == self && [toVC isKindOfClass:[SecondViewController class]]) {
+        TransitionFromFirstToSecond *transition = [[TransitionFromFirstToSecond alloc] init];
+
+        return transition;
+    }
+    else {
+        return nil;
+    }
+}
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
@@ -65,6 +64,11 @@
 }
 
 - (IBAction)pushToSecond:(id)sender
+{
+    [self performSegueWithIdentifier:@"pushToSecond" sender:nil];
+}
+
+- (IBAction)presentController:(id)sender
 {
     SecondViewController *sec = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"secondvc"];
     sec.transitioningDelegate = self;

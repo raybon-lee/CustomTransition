@@ -11,7 +11,7 @@
 #import "TransitionFromSecondToFirst.h"
 #import "BottomToTopTransition.h"
 
-@interface SecondViewController ()
+@interface SecondViewController ()<UINavigationControllerDelegate>
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactivePopTransition;
 @end
 
@@ -21,53 +21,58 @@
     [super viewDidLoad];
     UIScreenEdgePanGestureRecognizer *popRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePopRecognizer:)];
     popRecognizer.edges = UIRectEdgeLeft;
-   // [self.view addGestureRecognizer:popRecognizer];
+    [self.view addGestureRecognizer:popRecognizer];
     // Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-   
- //   self.navigationController.delegate = self;
+    self.navigationController.delegate = self;
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     // 必须设置delegate为nil.要不然会闪退
-//    if (self.navigationController.delegate == self) {
-//        self.navigationController.delegate = nil;
-//    }
+    if (self.navigationController.delegate == self) {
+        self.navigationController.delegate = nil;
+    }
 }
 
 - (IBAction)popToView:(id)sender
 {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)disMiss:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
-//{
-//    if (fromVC == self && [toVC isKindOfClass:[ViewController class]]) {
-//        TransitionFromSecondToFirst *transition = [[TransitionFromSecondToFirst alloc] init];
-//      
-//        return transition;
-//    }
-//    else {
-//        return nil;
-//    }
-//}
-//
-//- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-//                         interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
-//    
-//    if ([animationController isKindOfClass:[TransitionFromSecondToFirst class]]) {
-//        return self.interactivePopTransition;
-//    }
-//    else {
-//        return nil;
-//    }
-//}
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    if (fromVC == self && [toVC isKindOfClass:[ViewController class]]) {
+        TransitionFromSecondToFirst *transition = [[TransitionFromSecondToFirst alloc] init];
+      
+        return transition;
+    }
+    else {
+        return nil;
+    }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                         interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+    
+    if ([animationController isKindOfClass:[TransitionFromSecondToFirst class]]) {
+        return self.interactivePopTransition;
+    }
+    else {
+        return nil;
+    }
+}
 
 
 
